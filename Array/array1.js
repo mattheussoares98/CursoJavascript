@@ -21,11 +21,3 @@ console.log(`newArraySort: ${newArraySort}`)
 delete array2[7] //vai excluir o elemento mas não vai diminuir o tamanho do array. Esse índice 7 vai ficar undefined
 console.log(array2)
 
-const names = ["Mattheus", "Soares", "Barbosa"]
-names.splice(1, 1, "Elemento1", "Elemento2", "Elemento3")
-//o splice serve para adicionar, atualizar e remover elementos
-//1º elemento: define o índice que quer alterar/excluir/inserir
-//2º elemento: define quantos elementos quer excluir a partir do primeiro elemento inserido
-//3º elemento pra cima: quais elementos quer adicionar no array
-
-console.log(names)
