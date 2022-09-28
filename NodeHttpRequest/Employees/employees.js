@@ -14,12 +14,4 @@ axios.get(url).then(result => {
         .reduce(smallerSalary)
 
     console.log(chinaFemaleSmallerSalary)
-
-    // let chinaFemaleSmallerSalary = chinaAndFemale[0]
-    // for (let x in chinaAndFemale) {
-    //     if (chinaAndFemale[x].salario < chinaFemaleSmallerSalary.salario) {
-    //         chinaFemaleSmallerSalary = chinaAndFemale[x]
-    //     }
-    // }
-    // console.log(chinaFemaleSmallerSalary)
 })
