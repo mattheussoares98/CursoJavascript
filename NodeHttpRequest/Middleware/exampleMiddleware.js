@@ -1,3 +1,6 @@
+//middleware basicamente é quando consegue chamar outras funções através de uma só
+//e pode chamar em qualquer ordem
+
 function pass1(ctx, next) {
     ctx.middle1 = "middle1"
     next()
