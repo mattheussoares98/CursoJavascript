@@ -9,9 +9,9 @@ const pessoa = {
 
 const {nome: n, idade} = pessoa //como se estivesse criando um get relacionado a chave da classe "pessoa"
 // n = "Soares" //não é possível fazer uma atribuição
-console.log(n)
-console.log(idade)
-console.log(pessoa)
+console.log("n: ", n)
+console.log("idade: ", idade)
+console.log("pessoa: ", pessoa)
 
 
 const {documentos: {rg, cpf, habilitacao}} = pessoa //como se estivesse criando um get relacionado a chave da classe "pessoa"
@@ -21,7 +21,7 @@ console.log(habilitacao) //como não existe na classe "pessoa", vai retornar "un
 
 
 
-const [a] = [10]
+const [a] = [10] //está atribuindo 10 ao valor "a"
 console.log(a)
 
 const [n1, , n3, n4, , n6 = 10] = [1,2,3,4]

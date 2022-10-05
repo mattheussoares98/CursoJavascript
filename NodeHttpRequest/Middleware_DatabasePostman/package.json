@@ -12,6 +12,9 @@
   "license": "ISC",
   "devDependencies": {
     "express": "4.16.2",
-    "nodemon": "1.14.11"
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "body-parser": "1.18.2"
   }
 }
