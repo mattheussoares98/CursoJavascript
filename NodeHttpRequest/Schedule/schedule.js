@@ -1,3 +1,7 @@
+//comando para instalar o node-schedule:
+//"npm install node-schedule"
+//o ideal é navegar até a pasta que deseja instalar e executar o comando
+
 const schedule = require('node-schedule')
 
 const task1 = schedule.scheduleJob("*/5 * * * * *", function () {
