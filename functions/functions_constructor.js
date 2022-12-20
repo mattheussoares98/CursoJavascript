@@ -7,7 +7,7 @@ function Car(maxSpeed = 200, delta = 5) {
         if (atualSpeed + delta <= maxSpeed) {
             return atualSpeed += delta
         } else {
-            atualSpeed = maxSpeed
+            return atualSpeed = maxSpeed
         }
     }
 

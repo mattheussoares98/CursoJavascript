@@ -1,9 +1,7 @@
-//não pode ter repetição na chave
-
 const myMap = new Map()
-myMap.set("angular", { framework: false })
-myMap.set("react", { framework: true })
-myMap.set("key", "value")
+myMap.set("angular", { framework: false }) //adiciona um elemento com a chave específica e se já houver um elemento com essa chave, o atualiza
+myMap.set("react", { framework: true }) //adiciona um elemento com a chave específica e se já houver um elemento com essa chave, o atualiza
+myMap.set("key", "value") //adiciona um elemento com a chave específica e se já houver um elemento com essa chave, o atualiza
 
 
 
