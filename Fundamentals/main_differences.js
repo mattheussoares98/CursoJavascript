@@ -2,21 +2,24 @@
 
 //#########################################
 
-// É possível passar mais parâmetros para uma função do que ela foi declarada que pode receber.
-// Exp:
-// função que recebe somente um parâmetro
+// É possível passar mais parâmetros para uma função do que ela foi declarada
+// que pode receber. Exp: função que recebe somente um parâmetro
 function soma(a) {
     console.log(a)
 }
 // é possível chamar ela passando mais de um parâmetro
 soma(10, 10, 10, 10)
 
-// como ela recebe somente um parâmetro, a partir do segundo parâmetro que foi passado quando chamou a função, será ignorado
+// como ela recebe somente um parâmetro, a partir do segundo parâmetro que foi
+// passado quando chamou a função, será ignorado
 
 //#########################################
 
-// quando declara usando o "var", fica disponível em toda a classe, a não ser que tenha sido declarada dentro de uma função. Até quando é declarada dentro de uma função, fica disponível fora dessa função
-// quando declara como let, só fica disponível no mesmo bloco de código. Por isso é mais aconselhável o seu uso
+// quando declara usando o "var", fica disponível em toda a classe, a não ser
+// que tenha sido declarada dentro de uma função. Até quando é declarada dentro
+// de uma função, fica disponível fora dessa função. Quando declara como let, só
+// fica disponível no mesmo bloco de código. Por isso é mais aconselhável o seu
+// uso
 
 //#########################################
 
@@ -24,11 +27,13 @@ soma(10, 10, 10, 10)
 
 //#########################################
 
-//um array pode conter vários tipos de dados diferentes. int, double, string, etc
+//um array pode conter vários tipos de dados diferentes. int, double, string,
+//etc
 
 //#########################################
 
-//mesmo quando um array é do tipo const, é possível adicionar novos valores pra ele
+//mesmo quando um array é do tipo const, é possível adicionar novos valores pra
+//ele
 const funcs = []
 
 funcs.push(10)
@@ -38,8 +43,8 @@ console.log(funcs)
 
 //#########################################
 
-//é possível chamar uma variável antes dela ser declarada
-//se fizer isso, toda vez que chamar a variável antes da declaração dela, retornará "undefined"
+//é possível chamar uma variável antes dela ser declarada. Se fizer isso, toda
+//vez que chamar a variável antes da declaração dela, retornará "undefined"
 
 console.log(a)
 var a = 10

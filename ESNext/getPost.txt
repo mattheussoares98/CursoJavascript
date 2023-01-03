@@ -1,0 +1,9 @@
+Get = parâmetros no link de requisição
+Post = parâmetros no corpo da requisição
+
+Retornos
+1xx - informação
+2xx - sucesso
+3xx - redirecionamento
+4xx - erro no cliente
+5xx - erro no servidor

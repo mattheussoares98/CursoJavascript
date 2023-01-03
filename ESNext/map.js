@@ -16,7 +16,7 @@ console.log("react: ", myMap.get("react"))
 console.log()
 
 const varKeys = new Map([
-    [function () {}, "Function"],
+    [function () { }, "Function"],
     [{}, "Object"],
     [123, "number"]
 ])
