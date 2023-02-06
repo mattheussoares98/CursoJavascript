@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .selector {
+            /* criando uma classe que está sendo utilizada na div do body */
+            font-size: 30px;
+            border: 5px solid navy;
+            /* shorthand property */
+            font-family: 'Courier New', Courier, monospace;
+            /* se não encontrar a primeira fonte, tenta utilizar a seguinte e assim por diante */
+            width: calc(100% - 100px);
+            /* possível utilizar funções nos parâmetros também */
+        }
+        
+        /* pseudo-classe */
+        .selector:hover {
+            /* quando passa o mouse por cima */
+            color: red;
+            border: 7px solid red;
+        }
+
+        /* pseudo-elemento */
+        .selector::first-letter {
+            /* o que acontece com determinado elemento da classe */
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="selector">Conteúdo</div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+
+        /* ordem de especificidade:
+        1: regra com !important
+        2: seletores mais específicos
+        3: última regra processada (empate) */
+
+        p {
+            background-color: aliceblue;
+        }
+
+        .observacao {
+            /*uma classe é mais específica do que uma tag "p". Por isso nesse caso assume o que está na classe ao invés co dógigo acima*/
+
+            background-color: grey;
+        }
+
+        /* classe associada a um parágrafo. É mais específico do que a seleção da classe */
+        p.observacao {}
+    </style>
+</head>
+
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>
