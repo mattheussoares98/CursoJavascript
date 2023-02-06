@@ -7,3 +7,7 @@ for (let y in numbers) {
 for (let x = 0; x <= 10; x++) {
     console.log(x)
 }
+
+for(let x of numbers){
+    console.log(x)
+}

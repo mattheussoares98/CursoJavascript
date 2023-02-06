@@ -15,8 +15,7 @@ array2.push("12")
 console.log(array2.length)
 
 let newArraySort = array2.sort((a, b) => a > b) //vai ordenar o array. Não precisa passar parâmetro para ordenar
-console.log(`newArraySort: ${newArraySort}`)
-
+console.log(`newArraySort: ${newArraySort}`) //newArraySort: 1,2,3,4,5,6,11,12,,,,
 
 delete array2[7] //vai excluir o elemento mas não vai diminuir o tamanho do array. Esse índice 7 vai ficar undefined
 console.log(array2)

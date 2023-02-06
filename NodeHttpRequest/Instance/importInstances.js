@@ -3,8 +3,9 @@
 const singleInstanceA = require("./singleInstance")
 const singleInstanceB = require("./singleInstance")
 singleInstanceA.inc()
-singleInstanceA.inc()
-console.log(singleInstanceA.value)
+singleInstanceB.inc()
+//como a instância é única, o método de incremento será usado no mesmo valor do "./singleInstance"
+console.log(`singleInstanceA.value: ${singleInstanceA.value}`)
 
 
 const newInstanceA = require("./newInstance")() //quando o module.exports tem uma função como 
@@ -13,5 +14,7 @@ const newInstanceB = require("./newInstance")() //quando o module.exports tem um
 //objeto, está criando do modo factory. Pra invocar a função, precisa adicionar "()" depois do "require"
 newInstanceA.inc()
 newInstanceA.inc()
+newInstanceB.inc()
 //são instâncias diferentes, por isso não altera o valor do newInstanceB também
-console.log(newInstanceB.value)
+console.log(`newInstanceB.value: ${newInstanceB.value}`)
+console.log(`newInstanceA.value: ${newInstanceA.value}`)

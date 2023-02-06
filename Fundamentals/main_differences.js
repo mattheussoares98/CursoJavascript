@@ -6,12 +6,17 @@
 // que pode receber. Exp: função que recebe somente um parâmetro
 function soma(a) {
     console.log(a)
+    let acumulator = a
+    for (let i of arguments) {
+        //na definição da função recebe apenas um argumento, mas pode passar mais de um argumento para esse função e para obter esses próximos argumentos, basta usar os arguments
+        acumulator += i
+        console.log(acumulator)
+    }
 }
 // é possível chamar ela passando mais de um parâmetro
 soma(10, 10, 10, 10)
 
-// como ela recebe somente um parâmetro, a partir do segundo parâmetro que foi
-// passado quando chamou a função, será ignorado
+// como ela recebe somente um parâmetro, a partir do segundo parâmetro que foi passado quando chamou a função, será ignorado
 
 //#########################################
 
