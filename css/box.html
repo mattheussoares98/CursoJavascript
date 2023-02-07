@@ -5,7 +5,32 @@
     <meta charset="UTF-8">
     <title>Box Model</title>
     <style>
-        /* ... */
+        body {
+            font-size: 80px;
+            margin: 0;
+        }
+
+        .c1 {
+            background-color: yellow;
+        }
+
+        .c2 {
+            background-color: orange;
+        }
+
+        .c3 {
+            background-color: green;
+        }
+
+        div {
+            float: left;
+            padding: 50px;
+            /* Aplica em todas direções */
+            padding: 50px 100px;
+            /* aplica 50 no top e bottom, e 100 no right e left */
+            padding: 50px 100px 150px 200px;
+            /* top-right-bottom-left */
+        }
     </style>
 </head>
 
