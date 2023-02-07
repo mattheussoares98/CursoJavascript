@@ -5,7 +5,33 @@
     <meta charset="UTF-8">
     <title>Display</title>
     <style>
-        /* ... */
+        div {
+            background-color: aqua;
+        }
+
+        span {
+            background-color: blue;
+        }
+
+        li {
+            background-color: yellow;
+        }
+
+        div,
+        span,
+        li {
+            font-size: 40px;
+            width: 50%;
+            height: 100px;
+            /* Só aplica o que está acima se houver um display */
+            display: block;
+            /* o comportamento acima será aplicado para cada linha individualmente */
+            display: inline;
+            /* os componentes ficarão na mesma linha. Não aplica as alterações de altura e largura */
+            display: inline-block; /* coloca na mesma linha e leva em consideração também a altura e largura */
+
+            color: black;
+        }
     </style>
 </head>
 
