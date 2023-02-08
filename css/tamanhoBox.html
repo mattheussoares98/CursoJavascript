@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Tamanho Box</title>
     <style>
         body {
             font-size: 45px;
+            margin: 0;
+        }
+
+        div {
+            background-color: aqua;
+            width: 100%;
+            height: 300px;
+            padding: 100px;
+            border: solid 20px;
+            box-sizing: border-box;
+            /* margin, border e padding serão considerados no tamanho do box.
+            Por isso não vai ter uma barra de rolagem lateral, pois a largura da
+            div está configurada para ser 100% */
+            box-sizing: content-box;
+            /* margin, border e padding não serão considerados no tamanho da
+            largura da div. Portanto, a div terá: 100% da largura + margin +
+            padding + border. Se a largura for 100% e tiver mais algum desses
+            valores, vai criar uma barra de rolagem lateral */
         }
     </style>
 </head>
+
 <body>
     <div>
         O tamanho do Box é...
     </div>
 </body>
+
 </html>

@@ -5,7 +5,70 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div {
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px black;
+
+        }
+
+        .static {
+            left: 100px;
+            top: 100px;
+            background-color: steelblue;
+        }
+
+        .fixed {
+            position: fixed;
+            /* esse elemento vai realmente ficar fixo, de forma absoluta sempre vai ficar na mesma posição */
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1 {
+            position: relative;
+            /* vai levar em consideração o elemento anterior */
+            left: 50px;
+            background-color: seagreen;
+            top: 5px;
+        }
+
+        .absolute1 {
+            position: absolute;
+            /* vai se posicionar de forma relativa em relação à página porque a tag pai dela é o body*/
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategray;
+        }
+
+        .absolute2 {
+            position: absolute;
+            /* vai ficar de forma relativa em relação a tag anterior */
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+        }
+
+        .sticky {
+            position: sticky;
+            /* fica fixada na tela para caso role a página para baixo */
+            background-color: coral;
+            top: 10px;
+            /* quando estiver rolando a página para baixo, sempre que estiver
+            nessa posição de 10px do topo, vai ficar a imagem na tela */
+        }
     </style>
 </head>
 

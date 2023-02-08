@@ -159,16 +159,14 @@
             /* o split pega tudo que tem após o caracter */
             const oldURL = e.oldURL.split('#')[1]
             const newURL = e.newURL.split('#')[1]
-
-            console.log(oldUrl, newUrl)
             
             /* dentro do .menu, procura tudo que seja "a" e que tenha essa "href" */
-            const oldMenu = document.querySelector(`.menu a[href='#${oldUrl}']`)
-            const newMenu = document.querySelector(`.menu a[href='#${newUrl}']`)
+            const oldMenu = document.querySelector(`.menu a[href='#${oldURL}']`)
+            const newMenu = document.querySelector(`.menu a[href='#${newURL}']`)
 
             /* remove a classe do item que estava selecionado antes */
-            oldMenu && oldUrl.classList.remove('selected')
-            newUrl && newMenu.classList.add('selected')
+            oldURL && oldMenu.classList.remove('selected')
+            newURL && newMenu.classList.add('selected')
         }
     </script>
 </body>
