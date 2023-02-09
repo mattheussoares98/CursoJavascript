@@ -5,7 +5,49 @@
     <meta charset="UTF-8">
     <title>Desafio Card</title>
     <style>
-        /* ... */
+        .curso {
+            border: solid 2px black;
+            width: 300px;
+            height: 430px;
+            display: inline-block;
+            position: relative;
+            /* overflow: hidden; tudo que der overflow na div, não será exibido */
+        }
+
+
+        .curso img {
+            width: 300px;
+            height: 200px;
+            object-fit: fill;
+            display: inline-block;
+        }
+
+        .curso-info {
+            font-size: 30px;
+            height: 180px;
+            overflow: hidden;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .curso-preco {
+            position: absolute;
+            right: 15px;
+            padding-top: 5px;
+        }
+
+        .preco-de {
+            text-decoration: line-through;
+            color: rgb(128, 2, 2);
+            font-size: 20px;
+        }
+
+        .preco-por {
+            font-size: 25px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(10, 107, 10);
+        }
     </style>
 </head>
 
