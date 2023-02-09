@@ -4,9 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Flexbox #01</title>
-    <link rel="stylesheet" href="css/tag.css">
+    <!-- <link rel="stylesheet" href="css/tag.css"> -->
     <style>
-        /* ... */
+        div {
+            border: solid 5px blue;
+            font-size: 40px;
+            margin: 5px
+        }
+
+        .big {
+            font-size: 1.5em;
+        }
+
+        .flex-container {
+            display: flex;
+            /* indica que vai usar o flexbox. De padrão, vem como uma row */
+            flex-direction: row;
+            /* forma padrão quando habilita o display: flex */
+            flex-direction: column;
+            /* de padrão vem como row, na horizontal */
+            flex-direction: column-reverse;
+            /* inverte a ordem dos itens */
+            flex-direction: row-reverse;
+            /* muda para a horizontal e inverte a ordem dos itens */
+            width: 50%;
+            /* dependendo da largura da página vai dar um overflow e vai continuar exibindo os itens fora do tamanho definido */
+            flex-wrap: wrap;
+            /* quando der um overflow, vai quebrar a linha */
+            flex-wrap: wrap-reverse;
+            /* quebra a linha no sentido contrário */
+            height: 300px;
+            flex-flow: column-reverse wrap;
+            /* ordena a coluna ao contrário e quebra quando der overflow */
+
+            justify-content: flex-start;
+            justify-content: flex-end;
+            /* justifica tudo pro final */
+            justify-content: center;
+            /* justifica no meio */
+            justify-content: space-around;
+            justify-content: space-between;
+
+            align-items: center;
+            align-items: stretch;
+            align-items: baseline;
+            align-items: flex-start;
+            align-items: flex-end;
+
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;
+        }
     </style>
 </head>
 
@@ -23,7 +73,7 @@
         <div class="tag nolabel">9</div>
         <div class="tag nolabel">10</div>
     </div>
-    <script src="js/tag.js"></script>
+    <script></script>
 </body>
 
 </html>

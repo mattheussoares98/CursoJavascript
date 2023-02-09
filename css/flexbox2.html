@@ -4,9 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Flexbox #02</title>
-    <link rel="stylesheet" href="css/tag.css">
+    <!-- <link rel="stylesheet" href="css/tag.css"> -->
     <style>
-        /* ... */
+        div {
+            padding: 2px;
+            border: solid 2px blue;
+            display: flex;
+            font-size: 40px;
+            margin: 2px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+            /* o tamanho da caixa vai considerar também o padding, border e margin */
+        }
+
+        .flex-container {
+            width: 80%;
+            height: 300px;
+        }
+
+        .flex-container :nth-child(3) {
+            background-color: red;
+            order: 1;
+            /* todos filhos de um container tem a ordem igual a ZERO. Quando
+            coloca UM, tem uma ordem maior do que a dos outros e passa a ser o
+            último elemento */
+            align-self: center;
+            align-self: stretch;
+            /* é o padrão. Ele estica o elemento */
+        }
+
+        .flex-container div {
+            width: 100px;
+            flex-grow: 0;
+            /* valor padrão. Não faz alteração */
+            flex-grow: 1;
+            /* igual ao Expanded do flutter. Essa propriedade define a proporção
+            em relação aos outros elementos */
+            flex-shrink: 1;
+            /* diminui o elemento */
+        }
+        
+        .flex-container div:nth-child(1){
+            flex-grow: 10;
+        }
+        
+        .flex-container div:nth-child(2){
+            flex-shrink: 30;
+            /* diminui o elemento proporcionalmente ao que está faltando */
+        }
     </style>
 </head>
 
@@ -17,7 +64,7 @@
         <div class="tag nolabel">3</div>
         <div class="tag nolabel">4</div>
     </div>
-    <script src="js/tag.js"></script>
+    <!-- <script src="js/tag.js"></script> -->
 </body>
 
 </html>

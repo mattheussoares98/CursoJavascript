@@ -4,9 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Flexbox #03</title>
-    <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        .flex-container {
+            border: solid 2px orangered;
+            display: flex;
+            /* flex-direction: column; */
+            width: 600px;
+        }
+
+        .flex-container div {
+            border: solid 2px orangered;
+            margin: 2px;
+            padding: 2px;
+            flex-basis: 100px;
+            /* "força" o elemento a ter esse tamanho no mainAxis. Precisa ter a
+            propriedade display = flex para funcionar */
+        }
     </style>
 </head>
 
@@ -17,7 +30,6 @@
         <div class="tag nolabel">3</div>
         <div class="tag nolabel">4</div>
     </div>
-    <script src="js/tag.js"></script>
 </body>
 
 </html>
