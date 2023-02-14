@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">
+        <span wb-attrib>.terceiro .ultimo</span>
+    </div>
+    <script>
+        document.querySelector("#primeiro") /* pode selecionar por ID, tag, class, atributo, elemento dentro de outro, elementos que não possuam uma classe*/
+        document.querySelector("#primeiro").classList.add("destaque")
+
+        const selecionar = seletor => document.querySelectorAll(seletor).forEach(e => e.classList.add("destaque"))
+        const desselecionar = seletor => document.querySelectorAll(seletor).forEach(e => e.classList.remove("destaque"))
+
+        selecionar("div")
+        desselecionar("*") /* seletor universal, por isso vai remover de todos */
+        selecionar(".terceiro.ultimo") /* seleciona tudo que tem a classe "terceiro" E "ultimo" */
+        desselecionar("*")
+
+        selecionar(":not(#primeiro)") /* seleciona tudo que não possui o nome "primeiro" */
+        desselecionar("*")
+
+        selecionar(":nth-child(1)") /* selecionar o primeiro filho de algum elemento */
+        desselecionar("*")
+
+        selecionar("div:nth-child(1)") /* vai selecionar o primeiro elemento que for uma "div" */
+        desselecionar("*")
+
+        selecionar("[wb-attrib]") /* seleciona por atributos */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>
+        document.getElementById("primeiro") /* não precisa do # porque já espera um ID. Caso tenha mais de um elemento com o mesmo ID, ele pega o primeiro que encontrar */
+        document.getElementById("primeiro").classList.add("destaque") /* vai adicionar uma classe chamada destaque. Como no css possui um estilo pra classe chamada "destaque", vai aplicar esse estilo */
+
+        const divs = document.getElementsByTagName("div")
+        Array.from(divs) /* transformou as divs em um array */
+        Array.from(divs).forEach(e => e.classList.remove("destaque")) /* percorreu todas divs e removeu a classe destaque, fazendo com que sumisse o estilo */
+        const divsArray = [...divs]
+        divsArray.forEach(e => e.classList.add("destaque")) /* adiciona a classe em todas divs */
+
+        const ultimosElementos = document.getElementsByClassName("ultimo") /* retorna um HTML collection. Como não é um array, precisa percorrer usando o for */
+        for (let e of ultimosElementos) {
+            e.classList.remove("destaque")
+            /* percorre todas classes que possuem o nome "ultimo" e remove a classe "destaque" */
+        }
+
+    </script>
+</body>
+
+</html>
