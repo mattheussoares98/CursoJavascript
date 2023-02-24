@@ -15,7 +15,29 @@
         <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
     </div>
     <script>
-        // ...
+        const imgTag = document.querySelector("img") //seleciona uma tag/elemento
+        const imgClass = document.querySelector(".img") //seleciona uma classe
+        const imgID = document.querySelector("#img") //seleciona um ID
+        const imgPropertie = document.querySelector("[img]") //seleciona uma propriedade
+
+        console.log("imgTag getAttributeSrc ", imgTag.getAttribute("src"))
+        console.log("src ", imgTag.src)
+        console.log("[src] ", imgTag["src"])
+        console.log("alt ", imgTag.alt)
+        console.log("nodeType ", imgTag.nodeType)
+        console.log("nodeName ", imgTag.nodeName)
+
+        const src = imgTag.getAttributeNode("src")
+        console.log("nodeType ", src.nodeType)
+        console.log("nodeName ", src.nodeName)
+        console.log("nodeValue ", src.nodeValue)
+
+        const link = document.querySelector("a")
+        console.log("link.href ", link.href)
+        console.log("firstChild.nodeType ", link.firstChild.nodeType)
+        link.firstChild.nodeValue = "novo valor"
+        link.innerHTML = "novo valor²" //funciona igual à linha de cima
+
     </script>
 </body>
 

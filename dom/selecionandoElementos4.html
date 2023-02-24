@@ -22,7 +22,28 @@
         <p>Fim</p>
     </div>
     <script>
-        // ...
+        function log() {
+            console.log(this)
+        }
+
+        Node.prototype.log = log
+        NodeList.prototype.log = log
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        //fazendo isso para conseguir usar após o prototype, a função .log que será a mesma coisa que o console.log
+
+        const lista = document.querySelector("div ul")
+        lista.parentNode.log() //seleciona o elemento anterior
+        lista.childNodes.log() //seleciona o elemento posterior e retorna um NodeList com os valores. Caso tenha alguma quebra de linha entre os elementos filho, ele vai retornar um "text" pra cada quebra de linha. Pra 'corrigir' isso basta tirar as quebras de linha entre cada elemento filho
+        lista.children.log() //retorna todos os filhos sem considerar as quebras de linha. Então não vai retornar um "text" pra cada quebra de linha
+        lista.firstChild.log() //retorna um texto por causa das quebras de linhas dos elementos filhos
+        lista.firstElementChild.log() //retorna o primeiro elemento pois não considera as quebras de linha
+        lista.nextSibling.log() //segundo filho do elemento
+        lista.lastChild.log()
+        lista.lastChild.previousSibling.log() //elemento anterior ao último filho
+        lista.lastElementChild.log() //último elemento da lista
+        lista.parentNode.previousSibling.log() //combinação do parentnode com o previousSibling
+        lista.parentNode.nextSibling.log() //combinação do parentnode com o nextSibling
     </script>
 </body>
 
