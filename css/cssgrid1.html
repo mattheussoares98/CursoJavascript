@@ -6,14 +6,14 @@
     <title>CSS Grid #01</title>
     <style>
         /* https://caniuse.com/#feat=css-grid */
-        
+
         html,
         body {
             margin: 20px;
             height: calc(100% - 40px);
             background-color: lightgray;
         }
-        
+
         div {
             display: flex;
             align-items: center;
@@ -21,6 +21,36 @@
             font-size: 30px;
             border: solid 5px dodgerblue;
             background: #fff;
+        }
+
+        body {
+            display: grid;
+
+
+            grid-template-columns: repeat(6, 8.33% 8.33%);
+            grid-template-columns: repeat(12, 8.33%);
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);
+            /* Essas 3 opções acima acabam funcionando da mesma forma. Quando o
+            tamanho das colunas serão iguais, pode definir no primeiro parâmetro
+            quantas vezes multiplicará os parâmetros seguintes. Cada parâmetro
+            seguinte é a largura da coluna */
+            grid-template-columns: repeat(10, 50px) 100px 200px;
+            /* os primeiros 10 elementos terão 50px, o 11º terá 100px e o 12º
+            terá 200px */
+
+            grid-template-columns: 33% 33% 33%;
+            /* vai dividir em 3 colunas e cada uma com 33% do tamanho  */
+            grid-template-columns: 3fr 6fr 3fr;
+            /* vai ter 3 colunas. 3 + 6 + 3 = 12. A primeira coluna terá 3/12 do
+            tamanho, a segunda 6/12 e a última 3/12 */
+
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+            grid-template-rows: 100px 1fr;
+            /* como são 3 colunas e tem 12 valores, deveria ter 4 linhas mas
+            foram definidas somente duas. Como a segunda linha é uma fração do
+            valor disponível, a segunda linha terá o máximo de tamanho
+            disponível desconsiderando as outras linhas */
+
         }
     </style>
 </head>
