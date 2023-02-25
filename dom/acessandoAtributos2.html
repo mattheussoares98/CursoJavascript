@@ -17,7 +17,13 @@
         </ul>
     </div>
     <script>
-        // ...
+        const list = document.querySelector("div ul[destino='escritorio']") // = document.querySelector(#compras)
+        console.log("childNodes ", list.childNodes)
+        console.log("getAttribute ", list.getAttribute("destino"))
+        console.log("hasAttribute ", list.hasAttribute("destino"))
+        list.setAttribute("destino", "empresa") //vai alterar o valor do atributo "destino" para "empresa"
+        list.setAttribute("status", "aberto")//como não existe esse atributo, vai adicionar ele
+        list.removeAttribute("destino")
     </script>
 </body>
 

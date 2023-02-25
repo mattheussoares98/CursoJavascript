@@ -12,7 +12,13 @@
         Classes
     </div>
     <script>
-        // ...
+        const classes = document.querySelector("div").classList
+        classes.add("destaque") //tá dentro da definição do css de estilo, por isso aplica estilo
+        classes.remove("destaque")
+        classes.toggle("destaque") //se existe apaga e se não existe adiciona
+        console.log(classes.contains("destaque"))
+        console.log(classes.length)
+        classes.toggle("destaque") //se existe apaga e se não existe adiciona
     </script>
 </body>
 

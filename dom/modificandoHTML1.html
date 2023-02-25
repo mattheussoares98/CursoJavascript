@@ -9,7 +9,32 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector("body")
+
+        const div1 = document.createElement("div")
+        div1.classList.add("destaque")
+        div1.innerHTML = "Primeira div" //innerHTML define o valor da div
+
+        const div2 = document.createElement("div")
+        div2.setAttribute("wm-atributo", "valor")
+        div2.innerHTML = "Segunda div"
+        
+        const p = document.createElement("p")
+        p.innerHTML = "Terceiro elemento 'p'"
+        
+        const div3 = document.createElement("div")
+        div3.appendChild(p) //adiciona como último filho esse parágrafo dentro da "div"
+
+        body.appendChild(div1) //adiciona o elemento no body
+        body.appendChild(div2) //adiciona o elemento no body
+        body.appendChild(div3) //adiciona o elemento no body. Como a div possui um filho que é uma tag "p", adiciona essa tag também
+
+        const text = document.createTextNode("Antes...")
+        div3.insertBefore(text, div3.childNodes[0]) //1º param: o que vai adicionar... 2º pam: onde vai adicionar
+
+        const div4 = div3.cloneNode(true) //o parâmetro indica se vai clonar os filhos também ou somente o elemento
+        body.appendChild(div4)
+        body.removeChild(div4)
     </script>
 </body>
 
