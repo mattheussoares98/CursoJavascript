@@ -9,9 +9,30 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!-- <a href="https://google.com.br" onclick="navigateAfterFiveSeconds(event)">Google</a> -->
+        <a wait-one-moment href="https://google.com.br">Google</a>
     </div>
     <script>
-        // ...
+        function navigateAfterFiveSeconds(event) {
+            event.preventDefault()
+            //se não fizer isso, sempre vai acontecer o comportamento default independente do que estiver depois na função
+
+            console.log("Exiting in five seconds")
+
+            setTimeout(() => {
+                console.log("teste1")
+                const selectedElement = event.target //referencia o elemento que foi clicado
+                window.location.href = selectedElement.href
+                // "window.location.href" é o link do browser
+                console.log("teste")
+            }, 5000);
+
+        }
+
+        // const a = document.querySelector("a")
+        // a.onclick = navigateAfterFiveSeconds
+
+        const a = document.querySelector("[wait-one-moment]")
+        a.onclick = navigateAfterFiveSeconds
     </script>
 </body>

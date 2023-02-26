@@ -10,6 +10,16 @@
 <body class="conteudo exercicio">
     <div>Elemento</div>
     <script>
-        // ...
+        const item = document.querySelector("div")
+        item.style.position = "absolute"
+
+        item.onmousemove = event => {
+            const item = event.target //event.target é o elemento que foi selecionado, nesse caso a "div"
+            item.style.cursor = "move"
+            if (event.buttons) {
+                item.style.top = `${event.clientY - (item.clientHeight / 2)}px` //quando clicar na div, permite mover na vertical
+                item.style.left = `${event.clientX - (item.clientWidth / 2)}px` //quando clicar na div, permite mover na horizontal
+            }
+        }
     </script>
 </body>
