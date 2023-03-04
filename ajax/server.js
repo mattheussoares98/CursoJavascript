@@ -36,5 +36,12 @@ app.post("/formulario", (req, res) => {
     })
 })
 
+app.get("/parOuImpar", (req, res) => {
+    const par = parseInt(req.query.numero) % 2 === 0
+    res.send({
+        resultado: par ? "par" : "impar"
+    })
+})
+
 app.get("/teste", (req, res) => res.send("ok")) //quando mandar uma requisição do tipo GET com "/teste" no final, vai retornar "ok"
 app.listen(8080, () => console.log("Servidor iniciado"))
