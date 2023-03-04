@@ -10,7 +10,7 @@ const multer = require("multer") //interpretar o formulário que vier o arquivo 
 
 const storage = multer.diskStorage({
     destination: function (req, file, callback) {
-        callback(null, ".")
+        callback(null, "./upload")
     },
     filename: function (req, file, callback) {
         callback(null, `${Date.now()}_${file.originalname}`)
@@ -29,6 +29,12 @@ app.post("/upload", (req, res) => {
     })
 })
 
+app.post("/formulario", (req, res) => {
+    res.send({
+        ...req.body,
+        id: 1,
+    })
+})
 
 app.get("/teste", (req, res) => res.send("ok")) //quando mandar uma requisição do tipo GET com "/teste" no final, vai retornar "ok"
 app.listen(8080, () => console.log("Servidor iniciado"))
