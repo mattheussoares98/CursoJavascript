@@ -14,10 +14,10 @@ function appHTML() {
 
 function appCSS() {
     return gulp.src("src/assets/sass/index.scss")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(uglifycss({"uglifyComments" : true}))
-    .pipe(concat("app.min.css"))
-    .pipe(gulp.dest("build/assets/css"))
+    .pipe(sass().on("error", sass.logError)) //converte pra sass e se tiver um erro já o trata
+    .pipe(uglifycss({"uglifyComments" : true})) //remove todos comentários
+    .pipe(concat("app.min.css")) //concatena tudo no mesmo arquivo
+    .pipe(gulp.dest("build/assets/css")) //salva o arquivo nesse destino
 }
 
 function appJS() {
