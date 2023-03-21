@@ -13,7 +13,7 @@ function transformacaoJs(callback) {
             comments: false, //não copia arquivos de comentário
             presets: ["env"], //pega a versão mais atual do javascript
         }))
-        .pipe(uglify()) //converte todo o código pra ser unificado
+        .pipe(uglify()) //converte todo o código pra ser minificado
         .on("error", error => console.log(error))
         .pipe(
             concat("codigo.min.js") //o parâm serve pra dizer o nome que o arquivo vai ficar

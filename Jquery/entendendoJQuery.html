@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div>1</div>
+    <div>2</div>
+
+    <script>
+        // jQuery("div").hide(5000).show(5000).fadeOut(5000) //funciona igual a linha de baixo
+        $("div").hide(5000).show(5000).fadeOut(5000)
+        console.log($("div").get(0)) //retorna o primeiro elemento selecionado
+
+        console.log($.isEmptyObject({ nome: null })) //não é nulo, por isso retorna falso
+        console.log(jQuery.inArray(3, [1, 2, 3])) //retorna o índice 2
+
+
+        /*
+        POSSÍVEL ADICIONAR FUNÇÃO PARA O JQUERY CONFORME ABAIXO
+         */
+
+        $.fn.fundoVerde = function () {
+            this.css("background-color", "green")
+            return this //fazendo isso, é possível chamar mais uma chamada após essa
+        }
+        $("body").fundoVerde().hide(3000).show(3000)
+
+    </script>
+</body>

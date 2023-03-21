@@ -1,0 +1,9 @@
+body {
+    background-color: white;
+    background-image: url("../imgs/celtaware.png");
+    /*só deu certo porque colocou o endereço entre a url*/
+    height: 300px;
+    width: 300px;
+    background-position: "center";
+    background-repeat: no-repeat;
+}

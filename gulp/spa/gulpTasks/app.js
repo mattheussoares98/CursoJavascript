@@ -14,20 +14,31 @@ function appHTML() {
 
 function appCSS() {
     return gulp.src("src/assets/sass/index.scss")
-    .pipe(sass().on("error", sass.logError)) //converte pra sass e se tiver um erro já o trata
-    .pipe(uglifycss({"uglifyComments" : true})) //remove todos comentários
-    .pipe(concat("app.min.css")) //concatena tudo no mesmo arquivo
-    .pipe(gulp.dest("build/assets/css")) //salva o arquivo nesse destino
+        .pipe(sass().on("error", sass.logError)) //processa o arquivo pra gerar o css e se houver algum erro mostra no console
+        .pipe(uglifycss({ "uglyComments": true })) //remove todos comentários
+        .pipe(concat("app.min.css")) //concatena tudo no mesmo arquivo
+        .pipe(gulp.dest("build/assets/css")) //salva o arquivo nesse destino
 }
 
 function appJS() {
-    return 
+    return gulp.src("src/assets/js/**/*.js")
+        .pipe(babel({
+            presets: ["env"], //pega a versão mais atual do javascript
+        })) //transforma o código em uma versão mais compatível possível com os browsers
+        .pipe(uglify()) //converte todo o código pra ser minificado
+        .pipe(concat("app.min.js"))
+        .pipe(gulp.dest("build/assets/js"))
 }
 
 function appIMG() {
-    return 
+    return gulp.src("src/assets/imgs/**/*.*")
+    .pipe(gulp.dest("build/assets/imgs"))
 }
 
+gulp.task("appHTML", appHTML)
+gulp.task("appCSS", appCSS)
+gulp.task("appJS", appJS)
+gulp.task("appIMG", appIMG)
 
 module.exports = {
     appHTML,
