@@ -71,16 +71,47 @@
     <main class="conteudo-principal">
         <h1>Título do Conteúdo</h1>
         <section>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum. <a>teste a</a> </p>
         </section>
     </main>
     <footer>
         <p>Cod3r Ensino</p>
     </footer>
     <script>
-        // ...
+        const comBorda = { "border": "solid 9px orange" }
+        const semBorda = { "border": "none" }
+
+        $("a[href='#link3']")/*link que possui uma referência link3*/
+            .parent()/*"li" pai desse link*/.css(comBorda)
+
+        $("li:last").prev().css(semBorda)//outra forma de selecionar o mesmo link3 e retirar a borda
+
+        $("a[href='#link3']")/*link que possui uma referência link3*/
+            .parent()/*li pai desse link*/
+            .next()/*próximo elemento após o li, que é o li do #link4*/.css(comBorda).css(semBorda)
+
+        $("a[href='#link1']").parents()/*todos pais anteriores ao link1 até chegar no html*/
+            .css(comBorda).css(semBorda)
+
+        $("a[href='#link1']").parentsUntil("body")/*seleciona todos elementos pai até o body, sem considerar o body*/
+            .css(comBorda).css(semBorda)
+
+        $("main").children()/*seleciona todos filhos. Não seleciona os filhos dos filhos*/
+            .css(comBorda).css(semBorda)
+
+        $("body").find("a")/*todas tags "a" abaixo do body*/.css(comBorda).css(semBorda)
+
+        // $(document.getElementsByClassName("menu")).css(comBorda) //funciona igual as duas linhas abaixo
+        const elementoDOM = document.getElementsByClassName("menu")
+        $(elementoDOM).css(comBorda).css(semBorda)
+
+        $("main").children().each((i, e) => $(e).css(comBorda).css(semBorda))
     </script>
 </body>

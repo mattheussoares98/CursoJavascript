@@ -11,6 +11,7 @@
 <body class='conteudo exercicio'>
     <h1>Modificando HTML #03</h1>
     <div id='conteudo'></div>
+    <div id='conteudo2'></div>
 
     <script>
         const pessoas = [
@@ -19,7 +20,33 @@
             { nome: 'Carlos', nota: 7.6 },
             { nome: 'Julia', nota: 9.7 }
         ]
-        
-        // ...
+
+
+        //forma que eu fiz
+        $("#conteudo").append("<table id='mainRow'> <tr> <th >Nome</th> <th>Nota</th> </tr> </table>")
+        pessoas.forEach(element => {
+            $("#mainRow").append(`<tr> <td> ${element.nome} </td>  <td> ${element.nota} </td></tr>`)
+        });
+
+
+        //FORMA QUE FOI PASSADA NA AULA ESTÁ ABAIXO
+        //só vai executar o que está na função após todos elementos da dom serem
+        //carregados. Pode ser que as imagens ainda não tenham sido carregadas,
+        //mas a DOM já foi carregada. O ideal é fazer isso para não tentar
+        //manipular dados antes deles serem carregados pela página
+        $(document).ready(function () {
+            const linhas = pessoas.map(e => {
+                const tdNome = $("<td>").append(e.nome)
+                const tdNota = $("<td>").append(e.nota)
+
+                return $("<tr>").append(tdNome).append(tdNota)
+            })
+
+
+            const tabela = $("<table>").append(linhas)
+                .css("border", "solid 3px")
+
+            $("#conteudo2").append(tabela)
+        })
     </script>
 </body>

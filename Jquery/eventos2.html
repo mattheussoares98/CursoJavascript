@@ -21,6 +21,32 @@
     <input type="text" placeholder="Digite e Selecione">
     <div id="resultado2">?</div>
     <script>
-        // ...
+        const alternarDestaque = () => $("#div1").toggleClass("destaque")
+        // $("#div1").hover(alternarDestaque)
+        // $("#div1").hover(alternarDestaque, e => {})//não faz nada quando tira o mouse de cima do local
+        // $("#div1").hover(alternarDestaque, alternarDestaque) //mesma coisa que a linha acima
+        //ele sempre chama uma função quando passa o mouse por cima e outra quando tira o mouse de cima. Como passou somente uma função como parâmetro, vai chamar ela tanto quando passar o mouse por cima quanto quando tirar o mouse
+
+        $("#div1").on("mouseenter mouseleave", alternarDestaque)
+        //da pra passar uma função pra mais de um tipo de evento
+
+        $("#div1").one("mouseenter", e=> alert("CHAMA APENAS A PRIMEIRA VEZ QUE PASSA O MOUSE EM CIMA DA DIV"))
+        $("#div1").dblclick(e => $("#div1").fadeOut(1000).fadeIn(1000))
+
+        $(window).resize(function (e){
+            //chama essa função sempre que mudar o tamanho da página
+
+            const w = $(window).width()
+            const h = $(window).height()
+
+            $("#resultado1").html(`Largura: ${w} Altura: ${h}`)
+        })
+
+        $(":input").select(e => {
+            const inicio = e.target.selectionStart
+            const fim = e.target.selectionEnd
+
+            $("#resultado2").html(e.target.value.substring(inicio, fim))
+        })
     </script>
 </body>

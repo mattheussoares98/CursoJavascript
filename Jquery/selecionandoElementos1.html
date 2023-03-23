@@ -49,6 +49,25 @@
     </form>
 
     <script>
-        // ...
+        $("#feira").addClass("destaque")/* .removeClass("destaque") */
+        $("li").addClass("destaque")
+        $("[wm-obrigatorio]").removeClass("destaque")
+        $("li.opcional").removeClass("destaque")
+        $("div p span").addClass("destaque")
+
+        /* SELETORES EXCLUSIVOS DO JQUERY */
+
+        $("li:first").css("border", "solid 3px yellow")
+        $("li:odd").css("border", "solid 10px orange") //todos ímpares
+        $("li:gt(1)")/*greater than - maior que (índice)*/.css("border", "solid 10px aqua") //a partir do terceiro elemento aplica essa borda
+        $("li:not(:last)")/*li que não seja o último*/.css("border", "none")
+        $("li:contains('r')")/*verifica se possui determinados caracteres*/.css("background-color", "black")
+
+        $("form *")/*seleciona todos elementos de form*/.hide()
+        $("form :text")/*seleciona todos elementos que são do tipo text*/.show()
+        $("form :password")/*seleciona todos elementos que são do tipo password*/.show()
+        $("form :checkbox")/*seleciona todos elementos que são do tipo checkbox*/.show()
+        $("form :radio")/*seleciona todos elementos que são do tipo radio*/.show()
+        $("form :file")/*seleciona todos elementos que são do tipo file*/.show()
     </script>
 </body>
