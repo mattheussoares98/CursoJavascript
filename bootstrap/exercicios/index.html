@@ -10,28 +10,34 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" wm-link="#/paginas/bemVindo.html">Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              Dropdown
-            </button>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#/paginas/">Page 1</a></li>
-              <li><a href="#">Page 2</a></li>
-              <li><a href="#">Page 3</a></li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Exercícios
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" wm-link="#/paginas/fundamentos.html">Fundamentos</a>
+                        <a class="dropdown-item" wm-link="#/paginas/grid.html">Sistemas de Grid</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" wm-link="#/paginas/componentes.html">Componentes</a>
+                        <a class="dropdown-item" wm-link="#/paginas/formulario.html">Formulários</a>
+                    </div>
+                </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
-          </div>
         </div>
-      </nav>
+    </nav>
+
+    <!-- está aplicando um padding de 3 no link de destino através da classe abaixo -->
+    <main class="p-3" wm-link-destino></main> 
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
