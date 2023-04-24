@@ -1,0 +1,8 @@
+@import "~bootstrap/scss/bootstrap";
+//esse "~" significa que vai procurar dentro de node_modules
+
+$fa-font-path: "~font-awesome/fonts";
+//alterando o valor padrão do "$fa-font-path"
+
+@import "~font-awesome/scss/font-awesome";
+@import "custom";
