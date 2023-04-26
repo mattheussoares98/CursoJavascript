@@ -1,4 +1,4 @@
-import $ from "./cscc/index.scss"
+import $ from "jquery"
 
 function loadIncludes(parent) {
     /* parent vai pesquisar tudo que tiver wm-includes */
@@ -18,4 +18,4 @@ function loadIncludes(parent) {
     })
 }
 
-loadIncludes
+loadIncludes()
