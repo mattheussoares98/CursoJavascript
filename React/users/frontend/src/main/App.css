@@ -23,9 +23,9 @@
     grid-template-rows:
         var(--header-height) 1fr var(--footer-height);
     grid-template-areas:
-        "logo header"
-        "menu content"
-        "menu footer";
+        "logo header" /* primeira linha contem esses duas áreas */
+        "menu content" /* segunda linha contem esses duas áreas */
+        "menu footer"; /* terceira linha contem esses duas áreas */
     height: 100vh;
     background-color: antiquewhite;
 }
