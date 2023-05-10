@@ -1,0 +1,11 @@
+footer.footer {
+    align-items: center;
+    text-align: end;
+    padding: 0px 15px;
+    box-shadow: var(--shadow);
+    background-color: rgba(0, 0, 0, 0.108);
+}
+
+*{
+    padding: 4px;
+}
