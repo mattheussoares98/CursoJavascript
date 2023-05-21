@@ -1,0 +1,19 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Mattheus",
+            "price": 5.89
+        },
+        {
+            "id": 2,
+            "name": "Soares",
+            "price": 58.9
+        },
+        {
+            "id": 3,
+            "name": "Barbosa",
+            "price": 589
+        }
+    ]
+}
