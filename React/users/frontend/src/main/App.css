@@ -4,9 +4,8 @@
     --header-height: 100px;
     --aside-width: 225px;
     --footer-height: 40px;
-
-    --shadow:
-        0 2px 23px 0 rgba(0, 0, 0, 0.5),
+    --menu-top-height: 70px;
+    --shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.5),
         0 2px 49px 0 rgb(182, 179, 1);
 }
 
@@ -22,10 +21,14 @@
     /* 2 colunas */
     grid-template-rows:
         var(--header-height) 1fr var(--footer-height);
+    /* 3 linhas */
     grid-template-areas:
-        "logo header" /* primeira linha contem esses duas áreas */
-        "menu content" /* segunda linha contem esses duas áreas */
-        "menu footer"; /* terceira linha contem esses duas áreas */
+        "logo header"
+        /* primeira linha contem esses duas CLASSES */
+        "menu content"
+        /* segunda linha contem esses duas CLASSES */
+        "menu footer";
+    /* terceira linha contem esses duas CLASSES */
     height: 100vh;
     background-color: antiquewhite;
 }
@@ -48,4 +51,32 @@ main.content {
 
 footer.footer {
     grid-area: footer;
+}
+
+@media(max-width: 768px) {
+    .app {
+        grid-template-rows:
+            var(--header-height) var(--menu-top-height) 1fr var(--footer-height);
+        /* 4 linhas */
+        grid-template-columns: var(--aside-width) 1fr;
+        /* 2 colunas */
+        grid-template-areas:
+            "logo header"
+            "menu menu"
+            "content content"
+            "footer footer";
+    }
+}
+
+@media(max-width: 576px){
+    .app{
+        grid-template-rows: var(--logo-height) var(--menu-top-height) 1fr var(--footer-height);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "logo"
+        "menu"
+        "content"
+        "footer";
+    }
+
 }
