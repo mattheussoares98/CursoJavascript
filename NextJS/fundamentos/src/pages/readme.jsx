@@ -1,3 +1,5 @@
+import Layout from "@/Components/Layout"
+
 //O QUE É POSSÍVEL FAZER COM JSX
 export default function Jsx() {
     const titulo = <h1>JSX é um conceito central</h1>
@@ -6,16 +8,14 @@ export default function Jsx() {
         return <h2>{"Muito legal".toUpperCase()}</h2>
     }
 
-    return <div>
+    return <Layout titulo="JSX">
         {titulo}
         {subtitulo()}
         {console.log("teste")}
-        <p>
-            {
-                JSON.stringify({nome: "Mattheus", idade: "25"})
-            }
-        </p>
-    </div>
+        {
+            JSON.stringify({ nome: "Mattheus", idade: "25" })
+        }
+    </Layout>
 }
 
 //sobre o CSS, o globals.css é referenciado no _app.jsx. Portanto, é possível fazer novos imports no _app.jsx
