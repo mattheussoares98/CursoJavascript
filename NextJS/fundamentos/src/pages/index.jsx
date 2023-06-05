@@ -16,9 +16,12 @@ export default function Teste() {
             padding: "10px",
             height: "100vh"
       }}>
-        <Navegador cor="blue" titulo="Estiloso"></Navegador>
-        <Navegador cor="orange" titulo="Readme"></Navegador>
-        <Navegador cor="red" titulo="CabecalhoExemplo"></Navegador>
+        <Navegador cor="blue" titulo="Estiloso" destino="Estiloso"></Navegador>
+        <Navegador cor="orange" titulo="Readme" destino="Readme"></Navegador>
+        <Navegador cor="red" titulo="Cabecalho" destino="CabecalhoExemplo"></Navegador>
+        <Navegador cor="green" titulo="Navegação simples exemplo #01" destino="/navegacao"></Navegador>
+        <Navegador cor="grey" titulo="Navegação dinâmica exemplo #02" destino="/cliente/qualquer parâmetro/qualquer parâmetro2"></Navegador>
+        <Navegador cor="yellow" titulo="Componente com estado" destino="estado"></Navegador>
       </div>
     </>
   )

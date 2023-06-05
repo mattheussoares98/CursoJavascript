@@ -9,12 +9,14 @@ export default function Jsx() {
     }
 
     return <Layout titulo="JSX">
-        {titulo}
-        {subtitulo()}
-        {console.log("teste")}
-        {
-            JSON.stringify({ nome: "Mattheus", idade: "25" })
-        }
+        <h1>
+            {titulo}
+            {subtitulo()}
+            {console.log("teste")}
+            {
+                JSON.stringify({ nome: "Mattheus", idade: "25" })
+            }
+        </h1>
     </Layout>
 }
 

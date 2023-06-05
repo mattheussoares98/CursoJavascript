@@ -1,0 +1,13 @@
+import Layout from "@/Components/Layout";
+import { useRouter } from "next/router";
+
+export default function ClientePorCodigo(){
+    const router = useRouter();
+
+    return (
+        <Layout titulo= "Navegação dinâmica" >
+            <div>Código = {router.query.codigo}</div>
+            <div>Filial = {router.query.filial}</div>
+        </Layout>
+    )
+}

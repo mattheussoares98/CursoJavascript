@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Navegador(props) {
     return (
-        <Link href={props.titulo}>
+        <Link href={props.destino}>
             <div style={{
                 backgroundColor: props.cor,
             }} className={styles.navegador}>
