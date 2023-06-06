@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export default function Cliente(req, res) {
+export default function handler(req, res) {
 
     if (req.method === "GET") {
         handlerGet(req, res)
@@ -19,12 +19,13 @@ function handlerGet(req, res) {
         email: "mattheus@testemail.com.brl",
         params: JSON.stringify(req.query),
         //esses params são os parâmetros que são enviados na requisição da URL com ?nomeDoParametro=resultadoDaPesquisa
-        //exp de URL => http://localhost:3000/api/clientes?nome=mattheus?idade=25
-        //retorno => {"name":"Mattheus Soares","metodo":"GET","email":"mattheus@testemail.com.brl","params":"{\"nome\":\"mattheus?idade=25\"}"}
+        //exp de URL => http://localhost:3000/api/clientes?nome=mattheus&idade=25
+        //retorno => {"name":"Mattheus Soares","metodo":"GET","email":"mattheus@testemail.com.brl","params":"{\"nome\":\"mattheus\",\"idade\":\"25\"}"}
 
         //outra forma de acessar, conforme abaixo
         nome: req.query.nome,
         idade: req.query.idade,
+        codigo: req.query.codigo,
         //retorno => {"name":"Mattheus Soares","metodo":"GET","email":"mattheus@testemail.com.brl","params":"{\"nome\":\"mattheus\",\"idade\":\"25\"}","nome":"mattheus","idade":"25"}
     })
 }

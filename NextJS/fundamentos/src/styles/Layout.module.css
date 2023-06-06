@@ -39,3 +39,14 @@
     height: 100vh;
     margin: 30px;
 }
+.conteudo button {
+    color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    padding: 30px;
+    width: 100px;
+    height: 100px;
+}

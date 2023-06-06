@@ -22,6 +22,7 @@ export default function Teste() {
         <Navegador cor="green" titulo="Navegação simples exemplo #01" destino="/navegacao"></Navegador>
         <Navegador cor="grey" titulo="Navegação dinâmica exemplo #02" destino="/cliente/qualquer parâmetro/qualquer parâmetro2"></Navegador>
         <Navegador cor="yellow" titulo="Componente com estado" destino="estado"></Navegador>
+        <Navegador cor="pink" titulo="Integração 1" destino="Integracao_1"></Navegador>
       </div>
     </>
   )
