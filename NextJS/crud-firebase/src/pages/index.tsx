@@ -4,6 +4,7 @@ import Layout from '@/components/Layout'
 import Cliente from '@/core/Cliente'
 import Tabela from '@/components/Tabela'
 import Botao from '@/components/Botao'
+import Formulario from '@/components/Formulario'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,10 +34,12 @@ export default function Home() {
           <Botao className={`mb-4`} cor='green' >Novo cliente</Botao>
         </div>
         <span>
-          <Tabela clientes={clientes}
+          {/* <Tabela clientes={clientes}
             alterarCliente={alterarCliente}
             excluirCliente={excluirCliente}
-          ></Tabela>
+          ></Tabela> */}
+
+          <Formulario></Formulario>
         </span>
       </Layout>
     </div>

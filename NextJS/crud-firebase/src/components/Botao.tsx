@@ -5,13 +5,11 @@ interface BotaoProps {
     children: any
 }
 export default function Botao(props: BotaoProps) {
-    const cor = props.cor ?? "gray"
+    const cor = `bg-${props.cor}-400`
     return (
-        <button className={`
-        bg-gradient-to-r from-${cor}-400 to-${cor}-700
+        <button className={`${cor}
         text-white px-4 py-2 rounded-md
          ${props.className} 
-         /* se houver outra propridade passada como className, vai sobresrever o className escrito acima */
         `}>
             {props.children}
         </button>
