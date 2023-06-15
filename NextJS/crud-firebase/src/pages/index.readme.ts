@@ -1,0 +1,2 @@
+"O PROJETO FOI EXCLUÍDO DO FIREBASE. PARA TESTAR ESSA APLICAÇÃO, PRECISA CRIAR UM NOVO PROJETO E SUBSTITUIR OS DADOS EM 'NextJS\crud-firebase\src\backend\config.ts'"
+"pra iniciar o projeto, precisa executar 'npm run dev'"

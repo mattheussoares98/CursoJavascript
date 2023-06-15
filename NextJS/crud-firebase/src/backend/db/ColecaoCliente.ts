@@ -44,7 +44,7 @@ export default class ColecaoCliente implements ClienteRepositorio {
 
     async obterDados(): Promise<Cliente[]> {
         const query = await this.#colecao().get()
-        return query.docs.map(doc => doc.data()) ?? []
+        return query.docs.map(doc => doc.data()) 
     }
 
 }
