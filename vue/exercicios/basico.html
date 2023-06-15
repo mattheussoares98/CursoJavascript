@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conceitos Básicos</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+
+<body class="exercicio">
+    <div id="app">
+        <p>1- 2 + 2 = {{2 + 2}}</p>
+        <p>2- {{"teste".toUpperCase()}}</p>
+        <p>
+            3-
+            nome do produto: {{nome}}
+            <br>
+            preco do produto: {{preco}}
+            <br>
+            desconto do produto: {{desconto * 100}}%
+            <br>
+            preço com desconto: {{preco - desconto * preco}}
+        </p>
+        <p>4- hora certa: {{horaCerta()}}</p>
+        <p>5- preço com desconto: {{precoComDesconto}}</p>
+    </div>
+    <script>
+        new Vue({
+            el: "#app", //seletor do elemento que o Vue vai controlar. Todas TAGs abaixo desse elemento serão controlados pelo Vuw também
+            data: {
+                nome: "caneta",
+                preco: 10.00,
+                desconto: 0.15,
+            },
+            methods: {
+                horaCerta() {
+                    return new Date().toLocaleString()
+                }
+            },
+            computed: {
+                precoComDesconto(){
+                    //na função precisa colocar o this antes do atributo e pra usar o precoComDesconto, não precisa invocar a função, basta referenciar ela
+                    return this.preco * (1- this.desconto)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

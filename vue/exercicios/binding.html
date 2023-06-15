@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Binding</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+
+<body class="exercicio">
+
+    <div id="app">
+        <p>
+            <a :href="link" target="_blank">Cursos da cod3r</a>
+        </p>
+        <p>
+            <a v-bind:href="link" target="_blank">Cursos da cod3r usando v-bind</a>
+        </p>
+        <p>
+            <input type="text" v-model="nome"><br>
+            <!-- esse v-model altera o valor no input e o valor da propriedade Vue[data][nome] também -->
+            <span>{{nome}}</span>
+        </p>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                link: "https://youtube.com/cod3rcursos",
+                nome: "Mattheus",
+            },
+            watch: {
+                nome(novoValor){
+                    console.log(novoValor.toUpperCase())
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
