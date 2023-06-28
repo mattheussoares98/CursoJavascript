@@ -14,3 +14,9 @@
 .material-icons {
     vertical-align: middle;
 }
+
+.content {
+    padding: 16px;
+    background-color: white;
+    color: black;
+}

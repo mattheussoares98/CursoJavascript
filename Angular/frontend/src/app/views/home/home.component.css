@@ -1,0 +1,20 @@
+mat-card {
+    background-color: white;
+    padding: 20px;
+}
+
+mat-card-subtitle {
+    background-color: white;
+    color: gray;
+}
+
+.home .title {
+    font-size: 3rem;
+    padding-bottom: 10px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+.home .subtitle {
+    font-size: 1.1rem;
+}
