@@ -5,5 +5,11 @@
         <i class="material-icons red v-middle">
             work
         </i>
+        e <strong appRed>Mattheus</strong>
     </span>
+    <ul>
+        <li *myFor="let n em  [1, 2, 3]">{{n}}</li>
+        <!-- myFor é uma diretiva. Ou seja, cria como se fosse um atributo e quando ele é usado, pode chamar funções para realizar o que quiser quando o componente for iniciado -->
+        <!-- {{n}} é o valor implícito que foi definido no ngOnInit -->
+    </ul>
 </mat-toolbar>
