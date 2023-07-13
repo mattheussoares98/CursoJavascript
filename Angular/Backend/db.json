@@ -1,19 +1,24 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Mattheus",
-            "price": 5.89
-        },
-        {
-            "id": 2,
-            "name": "Soares",
-            "price": 58.9
-        },
-        {
-            "id": 3,
-            "name": "Barbosa",
-            "price": 589
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Mattheus",
+      "price": 5.89
+    },
+    {
+      "id": 2,
+      "name": "Soares",
+      "price": 58.9
+    },
+    {
+      "id": 3,
+      "name": "Barbosa",
+      "price": 589
+    },
+    {
+      "name": "Mattheus",
+      "price": 2.99918,
+      "id": 4
+    }
+  ]
 }

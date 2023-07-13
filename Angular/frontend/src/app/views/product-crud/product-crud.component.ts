@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class ProductCrudComponent implements OnInit{
 
   constructor(private router: Router){
+    //uma vez colocado no construtor, o router já fica disponível através do this
 
   }
 
