@@ -19,6 +19,16 @@
       "name": "Mattheus",
       "price": 2.99918,
       "id": 4
+    },
+    {
+      "name": "Mattheus",
+      "price": 2.99918,
+      "id": 5
+    },
+    {
+      "name": "cadastrando pelo formulário",
+      "price": "2.99",
+      "id": 6
     }
   ]
 }
