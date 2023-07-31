@@ -23,11 +23,4 @@ export class ProductReadComponent implements OnInit {
       console.log(this.products)
     })
   }
-
-  deleteProduct(id: string): void {
-    this.ProductService.delete(id).subscribe(() => {
-      this.ProductService.showMessage("Produto excluído com sucesso")
-      this.router.navigate(["/products"])
-    })
-  }
 }
