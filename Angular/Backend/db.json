@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Mattheus",
-      "price": 5.89
-    },
-    {
       "id": 2,
       "name": "Soares",
       "price": 58.9
@@ -24,11 +19,6 @@
       "name": "Mattheus",
       "price": 2.99918,
       "id": 5
-    },
-    {
-      "name": "cadastrando pelo formulário",
-      "price": "2.99",
-      "id": 6
     }
   ]
 }
