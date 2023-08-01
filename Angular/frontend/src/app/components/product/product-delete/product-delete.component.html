@@ -2,10 +2,10 @@
     <mat-card-title>Excluir produto</mat-card-title>
     <form action="">
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="product.name" name="name" [disabled]="true">
+            <input matInput placeholder="Nome" [value]="product.name" name="name" [disabled]="true">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [(ngModel)]="product.price" name="price" [disabled]="true">
+            <input matInput placeholder="Preço (R$)" [value]="product.price" name="price" [disabled]="true">
         </mat-form-field>
     </form>
 </mat-card>

@@ -19,7 +19,7 @@ export class ProductService {
   showMessage(msg: string): void {
     this.snackBar.open(msg, "Fechar", {
       duration: 3000,
-      horizontalPosition: "right",
+      horizontalPosition: "center",
       verticalPosition: "top",
     },)
   }

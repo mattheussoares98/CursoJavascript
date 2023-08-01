@@ -9,7 +9,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./product-delete.component.css']
 })
 export class ProductDeleteComponent {
-  product!: Product
+  product: Product = {
+    name: "",
+  }
 
   constructor(
     private productService: ProductService,
