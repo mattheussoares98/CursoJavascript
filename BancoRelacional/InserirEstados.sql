@@ -18,6 +18,7 @@ VALUES
     ('Piauí', 'PI', 'Nordeste', 3.22),
     ('Rio de Janeiro', 'RJ', 'Sudeste', 16.72),
     ('Rio Grande do Norte', 'RN', 'Nordeste', 3.51),
+    ('Rio Grande do Sul', 'RS', 'Nordeste', 3.51),
     ('Rondônia', 'RO', 'Norte', 1.81),
     ('Roraima', 'RR', 'Norte', 0.52),
     ('Santa Catarina', 'SC', 'Sul', 7.01),
@@ -25,8 +26,8 @@ VALUES
     ('Tocantins', 'TO', 'Norte', 1.55);
 
 -- -- Exemplo de Insert 1
--- INSERT INTO estados (nome, sigla, regiao, populacao)
---     VALUES ('Acre', 'AC', 'Norte', 0.83);
+INSERT INTO estados (nome, sigla, regiao, populacao)
+    VALUES ('Acre', 'AC', 'Norte', 0.83);
 
 -- Exemplo de Insert 2
 INSERT INTO estados 
