@@ -1,0 +1,20 @@
+db.estados.insert({nome: "Acre", sigla: "AC", regiao: "Norte"})
+acima, está adicionando um novo documento na coleção estados. 
+
+db.estados.save({nome: "Alagoas", sigla: "AL", regiao: "Nordeste", populacao: 3322000})
+se não houver essas informações, serão adicionadas em um documento novo. Se já houver, será atualizado
+
+db.estados.insert({
+    nome: "Rio de Janeiro",
+    sigla: "RJ",
+    regiao: "Sudeste",
+    cidades: [{
+        nome: "Niterói",
+        area: 133.9,
+        populacao: 487562
+    }]
+})
+
+db.estados.find()
+db.estados.find().pretty()
+db.help()

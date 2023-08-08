@@ -1,0 +1,15 @@
+help
+cls
+show dbs
+use wm
+show dbs
+db.createCollection('estados') => se ainda não houver a coleção, ela é criada automaticamente
+show dbs
+show collections
+db.createCollection('Estados') => se ainda não houver a coleção, ela é criada automaticamente
+show collections
+db.Estados.drop()
+show collections
+db.estados.drop()
+show collections
+show dbs

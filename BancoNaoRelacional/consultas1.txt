@@ -1,0 +1,30 @@
+db.estados.find() 
+consulta todos estados
+
+db.estados.find().
+
+pretty() 
+exibe os estados de uma forma melhor pra visualizar
+
+db.estados.findOne() 
+retorna somente um resultado
+
+db.estados.findOne({sigla: "RJ"}) 
+filtra pela sigla
+
+db.estados.find({$or: [{sigla: "RJ"}, {sigla: "AC"}]}).pretty() 
+possível passar mais de um filtro pra função find. Cada filtro precisa estar dentro de um array e precisa estar no formato de objeto
+
+db.estados.find({populacao: {$exists: true}}).pretty() 
+procurar tudo que possui determinado atributo
+
+db.estados.find().skip(1).limit(2) 
+skip pula determinada quantidade de registros. Limit limita a quantidade de resultados
+
+db.estados.count() 
+
+db.estados.find({sigla: "SP"}, {nome: 1, sigla: 1, _id: 0})
+"nome: 1" indica que vai retornar o nome
+"_id: 0" diz que não vai retornar o ID. Por padrão ele retorna o ID
+
+db.estados.find({sigla: "SP"}, {"cidades.nome": 1, _id: 0})
