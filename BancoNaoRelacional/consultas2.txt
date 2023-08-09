@@ -1,9 +1,16 @@
+aggregate vai retornando valores de acordo com os filtros inseridos dentro do array
+o project serve para indicar as tags que serão retornadas ou não
 db.estados.aggregate([
     { $project: {nome: 1, "cidades.nome": 1, _id: 0} }
 ])
 
 db.estados.aggregate([
     { $project: {populacao: {$sum: "$cidades.populacao"}, sigla: 1, _id: 0} },
+    
+    esse passo baixo vai ser executado com base no resultado do passo acima
     { $group: {_id: null, populacaoTotal: {$sum: "$populacao" }} },
+
+    
+    esse passo baixo vai ser executado com base no resultado do passo acima
     { $project: { _id: 0, populacaoTotal: 1 } },
 ])
